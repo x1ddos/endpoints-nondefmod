@@ -1,0 +1,7 @@
+application: endpoints-nondefmod
+
+dispatch:
+  - url: "*/_ah/api/*"
+    module: api
+  - url: "*/_ah/spi/*"
+    module: api

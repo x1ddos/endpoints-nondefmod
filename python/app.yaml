@@ -1,0 +1,12 @@
+application: endpoints-nondefmod
+
+runtime: python27
+api_version: 1
+
+module: default 
+version: one
+threadsafe: true
+
+handlers:
+- url: /
+  script: main.app

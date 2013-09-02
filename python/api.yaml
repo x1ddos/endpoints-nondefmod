@@ -1,0 +1,12 @@
+application: endpoints-nondefmod
+
+runtime: python27
+api_version: 1
+
+module: api
+version: one 
+threadsafe: true
+
+handlers:
+- url: /_ah/spi/.*
+  script: api.app

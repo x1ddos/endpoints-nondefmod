@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>nondefmod</groupId>
+    <artifactId>endpoints-nondefmod</artifactId>
+    <version>one</version>
+  </parent>
+
+  <groupId>nondefmod</groupId>
+  <artifactId>ear</artifactId>
+  <version>one</version>
+  <packaging>ear</packaging>
+
+  <name>ear</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <version>5</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <unpackTypes>war</unpackTypes> 
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+      <version>1.8.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>nondefmod</groupId>
+      <artifactId>api</artifactId>
+      <version>one</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>nondefmod</groupId>
+      <artifactId>default</artifactId>
+      <version>one</version>
+      <type>war</type>
+    </dependency>
+        
+  </dependencies>
+  <properties/>
+</project>
